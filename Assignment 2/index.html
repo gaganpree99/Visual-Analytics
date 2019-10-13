@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='shortcut icon' type='image/x-icon' href='favicon-facebook_normal.png' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Cabin|Kalam&display=swap" rel="stylesheet">
+
+<head>
+    <title>CSCI 6612: Assignment 2</title>
+
+    <meta charset="utf-8">
+    <style>
+        input {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body style="background: #b07fff1f;">
+
+    <div class="container-fluid mt-5">
+        <h1 style="margin-right:2%" class="align-items-center text-center mb-5"> <span
+                class="badge badge-secondary">Assignment 2</span></h1>
+
+        <div class="col-xl-12 text-center">
+            <div class="col-xl-4 custom-file ">
+                <input type="file" class="custom-file-input" id="fileToLoad" accept=".csv">
+                <label class="custom-file-label" style="text-align: justify" for="customFile">Choose file</label>
+            </div>
+            <button class="col-xl-2 btn btn-dark" style="margin-left:2%" onclick="loadFileAsText()">Upload File</button>
+            <button class="col-xl-2 btn btn-dark" style="margin-left:2%" id="resetRadViz" onclick="resetRadViz()">Reset
+                RadViz</button>
+        </div>
+
+        <div class="mt-5" style="margin-top: 10px;text-align: center;position: relative;" id="div-range">
+            <span style="top: -6px;position: relative;padding-right: 20px; font-weight: 400; font-size: 18px;">
+                Update Opacity : </span>
+            <input id="opacity" type="range" min="20" max="100" value="100" style="width: 400px;margin-right: 10px;">
+        </div>
+
+        <div class="container-fluid mt-5 col-xl-12">
+            <div id="radviz" style="float:right;" class="col-xl-8"></div>
+            <div class="card text-white bg-dark col-xl-4" style="max-width: 16rem; margin-left:230px"
+                style="float:left; ">
+                <div class="card-header">Select Attributes</div>
+                <p class="list-group-item" style="background-color: #343a40;" id="append">Dimensions</li>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <!-- <script src="d3.min.js?v=3.2.8"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="radvizGagan.js"></script>
+    <script src="reader.js"></script>
+
+
+
+    </script>
+</body>
+
+</html>
